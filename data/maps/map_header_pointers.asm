@@ -245,7 +245,7 @@ MapHeaderPointers::
 	dw SilphCo2F_h ; UNUSED_MAP_F1
 	dw SilphCo2F_h ; UNUSED_MAP_F2
 	dw SilphCo2F_h ; UNUSED_MAP_F3
-	dw SilphCo2F_h ; UNUSED_MAP_F4
+	dw PalletCave_h ; UNUSED_MAP_F4 -> PALLET_CAVE
 	dw LoreleisRoom_h
 	dw BrunosRoom_h
 	dw AgathasRoom_h
