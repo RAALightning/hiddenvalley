@@ -18,12 +18,12 @@ _PalletTownOakItsUnsafeText::
 	done
 
 _PalletTownGirlText::
-	text "I'm raising"
-	line "#MON too!"
-
-	para "When they get"
-	line "strong, they can"
-	cont "protect me!"
+	text "They say #MON"
+	line "live in that"
+	cont "old cave."
+	
+	para "It's too"
+	line "scary for me!"
 	done
 
 _PalletTownFisherText::
