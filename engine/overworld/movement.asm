@@ -119,6 +119,11 @@ UpdateNPCSprite:
 	ld hl, wMapSpriteData
 	add l
 	ld l, a
+;;;;;;;;;;; FIXED: Account for carry
+	jr nc, .nc 
+	inc h
+.nc
+;;;;;;;;;;;
 	ld a, [hl]        ; read movement byte 2
 	ld [wCurSpriteMovement2], a
 	ld h, HIGH(wSpriteStateData1)
@@ -620,7 +625,7 @@ CanWalkOntoTile:
 	inc l
 	ld a, [hl]         ; x#SPRITESTATEDATA1_XPIXELS
 	add e              ; add X delta
-+	cp $91             ; if value is >$91, the destination is off screen (either $92 or $FF underflow)
+	cp $91             ; if value is >$91, the destination is off screen (either $92 or $FF underflow)
 	jr nc, .impassable ; don't walk off screen
 	push de
 	push bc
